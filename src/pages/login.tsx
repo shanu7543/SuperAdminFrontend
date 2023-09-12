@@ -48,7 +48,11 @@ function Basic() {
     });
     console.log("You are loggedIn ");
     if(response.success){
+    await  alert("Loggedin Sucessfully...")
       router.push("/home")
+    }
+    else{
+      alert("wrong credentials")
     }
   };
 
