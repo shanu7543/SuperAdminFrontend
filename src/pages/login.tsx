@@ -56,52 +56,16 @@ function Basic() {
     }
   };
 
-  // Define the background image URL
-  const backgroundImageUrl =
-    "https://img.freepik.com/free-psd/golden-celebration-design-elements_23-2150317957.jpg?w=1380&t=st=1694489125~exp=1694489725~hmac=ec7774bde6dc970141e2d747e44995e2c93a50f11598f26e94a6287f58baacec";
-
-  const mainDivStyle: React.CSSProperties = {
-    backgroundImage: `url(${backgroundImageUrl})`, // Set the background image
-    backgroundSize: "cover", // Adjust the background size as needed
-  };
+ 
 
   return (
     <div
-      className="h-screen w-screen bg-neutral-50 flex justify-center items-center"
-      style={mainDivStyle}
-    >
+      className="h-screen w-screen bg-neutral-50 flex justify-center items-center" >
       <div className="h-96 w-96">
         <Card className="mx-2 mt-3 ">
           <div className="bg-gradient-to-r  from-blue-300 via-blue-500 to-blue-300 rounded-lg shadow-info p-2 mb-1 text-center ">
             <span className="text-white text-lg font-medium mt-1">Sign in</span>
-            <Grid
-              container
-              spacing={3}
-              justifyContent="center"
-              className="mt-1 mb-2"
-            >
-              <Grid item xs={2}>
-                <span>
-                  <MuiLink href="#" className="text-white">
-                    <FacebookIcon color="inherit" />
-                  </MuiLink>
-                </span>
-              </Grid>
-              <Grid item xs={2}>
-                <span>
-                  <MuiLink href="#" className="text-white">
-                    <GitHubIcon color="inherit" />
-                  </MuiLink>
-                </span>
-              </Grid>
-              <Grid item xs={2}>
-                <span>
-                  <MuiLink href="#" className="text-white">
-                    <GoogleIcon color="inherit" />
-                  </MuiLink>
-                </span>
-              </Grid>
-            </Grid>
+            
           </div>
           <div className="pt-4 pb-3 px-3">
             <form role="form" onSubmit={handleSubmit(loginHandler)}>
@@ -139,7 +103,7 @@ function Basic() {
               <div className="mt-3 mb-1 text-center">
                 <Link href={"/"}>
                   <span className="text-sm">
-                    Don't remember password ? forget password
+                    Don't remember password ? <span className="text-blue-500"> forget password </span> 
                   </span>
                 </Link>
               </div>
